@@ -8,6 +8,7 @@ import axios from 'axios'
 // import GridLayout from 'react-grid-layout'
 // import Masonry from 'masonry-layout'
 // import Masonry from 'react-masonry-component'
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 function Home() {
 
@@ -26,8 +27,11 @@ function Home() {
 
             <WelcomeBox/>
 
-            <section
+            <ResponsiveMasonry>
+            <Masonry
                 className={"Home__content"}
+                columnsCount={3}
+                gutter="2rem"
             >
 
                 {data?.map(item => (
@@ -37,7 +41,8 @@ function Home() {
                     />
                 ))}
 
-            </section>
+            </Masonry>
+            </ResponsiveMasonry>
 
         </div>
     )
