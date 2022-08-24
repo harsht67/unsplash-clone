@@ -5,4 +5,5 @@
 - SCSS
 - Redux
 - Axios
+- React-icons
 - Unsplash API

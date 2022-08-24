@@ -1,10 +1,13 @@
 import './App.scss'
+import { Header, Home } from './features'
 
 function App() {
   return (
     <div className="App">
       
-      Unsplash Clone
+      <Header/>
+
+      <Home/>
 
     </div>
   )

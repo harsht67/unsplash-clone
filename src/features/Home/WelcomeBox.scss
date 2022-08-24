@@ -1,0 +1,15 @@
+.WelcomeBox {
+    padding: 1rem;
+    height: 250px;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-block-end: 2rem;
+
+    h1 {
+        margin-block-end: 0.5rem;
+    }
+
+}

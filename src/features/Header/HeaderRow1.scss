@@ -1,0 +1,15 @@
+.HeaderRow1 {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .HeaderRow1__logo {
+        width: 2.25rem;
+    }
+
+    .HeaderRow1__btn {
+        font-size: 1.5rem;
+    }
+
+}

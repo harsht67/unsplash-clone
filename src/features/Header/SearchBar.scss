@@ -1,0 +1,22 @@
+.SearchBar {
+    width: 100%;
+    background-color: #eeeeee;
+    border-radius: 2rem;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: inherit;
+        width: 100%;
+    }
+
+    .icons {
+        font-size: 1.25rem;
+    }
+
+}
