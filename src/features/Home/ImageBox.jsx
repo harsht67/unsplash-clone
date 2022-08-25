@@ -3,13 +3,14 @@ import User from './User'
 
 import { HiHeart, HiOutlinePlus } from 'react-icons/hi'
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
+import { forwardRef } from 'react'
 
-function ImageBox(props) {
+const ImageBox = forwardRef((props, ref) => {
 
     const { user, urls } = props.data
 
     return (
-        <article className="ImageBox">
+        <article className="ImageBox" ref={ref} >
 
             <header className="ImageBox__header">
 
@@ -43,6 +44,6 @@ function ImageBox(props) {
 
         </article>
     )
-}
+})
 
 export default ImageBox

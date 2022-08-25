@@ -9,10 +9,6 @@
         }
     }
 
-    .ImageBox2__img {
-        // width: 100%;
-    }
-
     .ImageBox2__hover {
         padding: 1rem;
         position: absolute;
@@ -29,7 +25,7 @@
             padding-inline: 0.5rem;
             display: flex;
             align-items: center;
-            background-color: #dadada;
+            background-color: #f0f0f0;
             color: #727272;
 
             .icons {

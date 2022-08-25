@@ -2,13 +2,14 @@ import './ImageBox2.scss'
 import User from './User'
 
 import { HiHeart, HiPlus, HiArrowDown } from 'react-icons/hi'
+import { forwardRef } from 'react'
 
-function ImageBox2(props) {
+const ImageBox2 = forwardRef((props, ref) => {
 
     const {user, urls} = props.data
 
     return (
-        <article className="ImageBox2">
+        <article className="ImageBox2" ref={ref}>
 
             <img
                 className="ImageBox2__img"
@@ -44,6 +45,6 @@ function ImageBox2(props) {
 
         </article>
     )
-}
+})
 
 export default ImageBox2
