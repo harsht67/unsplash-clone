@@ -17,8 +17,27 @@ function HeaderRow1() {
 
             <SearchBar/>
 
+            <nav className="HeaderRow1__nav">
+                <ul className="ul-nav" >
+                    <li>Explore</li>
+                    <li>Advertise</li>
+                    <li>Blog</li>
+                </ul>
+            </nav>
+
+            <div className="HeaderRow1__register">
+                Log in / Sign up
+            </div>
+
+            <button
+                className="HeaderRow1__submitBtn sm-text"
+            >
+                Submit a photo
+            </button>    
+
+
             <GiHamburgerMenu
-                className="HeaderRow1__btn"
+                className="HeaderRow1__menuBtn"
             />
 
         </section>
