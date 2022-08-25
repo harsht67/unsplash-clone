@@ -5,9 +5,6 @@ import ImageBox2 from './ImageBox2'
 
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-// import GridLayout from 'react-grid-layout'
-// import Masonry from 'masonry-layout'
-// import Masonry from 'react-masonry-component'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 function Home() {
@@ -28,20 +25,20 @@ function Home() {
             <WelcomeBox/>
 
             <ResponsiveMasonry>
-            <Masonry
-                className={"Home__content"}
-                columnsCount={3}
-                gutter="2rem"
-            >
+                <Masonry
+                    className={"Home__content"}
+                    columnsCount={3}
+                    gutter="2rem"
+                >
 
-                {data?.map(item => (
-                    <ImageBox2
-                        key={item.id}
-                        data={item}
-                    />
-                ))}
+                    {data?.map(item => (
+                        <ImageBox2
+                            key={item.id}
+                            data={item}
+                        />
+                    ))}
 
-            </Masonry>
+                </Masonry>
             </ResponsiveMasonry>
 
         </div>

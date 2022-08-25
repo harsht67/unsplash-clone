@@ -1,14 +1,1 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-
-* {
-    box-sizing: border-box;
-    font-family: Roboto, arial;
-}
-
-body {
-    margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
+@use './scss'
