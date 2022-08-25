@@ -28,12 +28,12 @@ function WelcomeBox() {
                     <a>wallpapers, </a>
                     <a>backgrounds, </a>
                     <a>happy, </a>
-                    <a>love, </a>
+                    <a>love</a>
                 </section>
 
             </section>
 
-            <footer className="WelcomeBox__footer sm-text">
+            <footer className="WelcomeBox__footer">
                 
                 <small>
                     Photo by and machines

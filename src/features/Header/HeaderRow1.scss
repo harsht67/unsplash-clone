@@ -7,7 +7,15 @@
     gap: 1rem;
 
     .HeaderRow1__logo {
-        width: 2.25rem;
+        width: 2rem;
+    }
+
+    %hover {
+        cursor: pointer;
+
+        &:hover {
+            color: #000;
+        }
     }
 
     .HeaderRow1__nav {
@@ -17,6 +25,8 @@
         li {
             display: inline;
             margin-inline-end: 1rem;
+            @extend %hover;
+            
         }
 
         @include mq(lg) {
@@ -29,6 +39,10 @@
         display: none;
         flex-shrink: 0;
 
+        > * {
+            @extend %hover;
+        }
+
         @include mq(lg) {
             display: initial;
         }
@@ -38,11 +52,14 @@
     .HeaderRow1__submitBtn {
         display: none;
         border: 1px solid #000;
+        border-color: inherit;
         outline: none;
         background: none;
+        color: inherit;
         border-radius: 2px;
         flex-shrink: 0;
         padding: 0.5rem 0.75rem;
+        @extend %hover;
 
         @include mq(lg) {
             display: initial;
@@ -52,6 +69,7 @@
 
     .HeaderRow1__menuBtn {
         font-size: 2.5rem;
+        @extend %hover;
     }
 
 }

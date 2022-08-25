@@ -33,7 +33,7 @@ input {
     
 }
 
-.sm-text {
+.text {
     font-size: 0.9rem;
 
     @include mq(md) {
@@ -42,6 +42,19 @@ input {
 
     @include mq(lg) {
         font-size: 1rem;
+    }
+    
+}
+
+.sm-text {
+    font-size: 0.825rem;
+
+    @include mq(md) {
+        font-size: 0.85rem;
+    }
+
+    @include mq(lg) {
+        font-size: 0.875rem;
     }
     
 }

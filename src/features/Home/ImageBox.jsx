@@ -35,7 +35,7 @@ const ImageBox = forwardRef((props, ref) => {
                 </div>
 
                 <div>
-                    <span>Download</span>
+                    <span className="text">Download</span>
                     <MdOutlineKeyboardArrowDown className="icons"/>
                 </div>
 

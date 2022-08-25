@@ -2,14 +2,12 @@ import './Home.scss'
 import WelcomeBox from './WelcomeBox'
 import ImageBox from './ImageBox'
 import ImageBox2 from './ImageBox2'
-import useFetchData from './useFetchData'
+import useFetchData from './hooks/useFetchData'
 
 import { createElement, useEffect, useState, useRef, useCallback } from 'react'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 function Home() {
-
-    // const [data, setData] = useState([])
 
     const [pageNumber, setPageNumber] = useState(1)
 
@@ -33,7 +31,6 @@ function Home() {
         if(elem) observer.current.observe(elem)
 
     }, [loading])
-
 
     const updateComponent = () => {
 
@@ -71,9 +68,7 @@ function Home() {
                         else {
                             return createElement(component=="ImageBox"?ImageBox:ImageBox2, {key: item.id, data: item})
                         }
-                    })
-
-                    }
+                    })}
 
                     { loading && 'Loading...' }
 

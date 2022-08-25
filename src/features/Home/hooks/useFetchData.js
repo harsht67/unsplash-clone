@@ -17,7 +17,7 @@ function useFetchData(pageNumber) {
             url: `https://api.unsplash.com/photos?page=${pageNumber}&client_id=6FwjynLcZYVVjDDvsN_Ls-2mWKJrAlirkzoBG00JioU&count=10`
         })
             .then(res => {
-                setData(prev => [...data, ...res.data])
+                setData(prev => [...prev, ...res.data])
                 setLoading(false)
             })
             .catch(err => setError(err))

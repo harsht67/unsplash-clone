@@ -1,5 +1,4 @@
 .ImageBox {
-    margin-block-end: 2rem;
 
     .ImageBox__header {
         padding: 0.5rem;
@@ -24,9 +23,16 @@
             display: flex;
             align-items: center;
             height: 2rem;
-            border: 1px solid #000;
-            border-radius: 2px;
-        
+            border: 1px solid #cacaca;
+            border-radius: 4px;
+            color: #777777;
+            cursor: pointer;
+
+            &:hover {
+                color: #000;
+                border-color: #000;
+            }
+
             .icons {
                 font-size: 1.25rem;
             }
@@ -38,6 +44,7 @@
 
             span {
                 border-inline-end: 1px solid #000;
+                border-color: inherit;
                 height: 100%;
                 display: flex;
                 align-items: center;

@@ -4,7 +4,7 @@ import HeaderRow2 from './HeaderRow2'
 
 function Header() {
     return (
-        <header className="Header">
+        <header className="Header sm-text">
 
             <HeaderRow1/>
 

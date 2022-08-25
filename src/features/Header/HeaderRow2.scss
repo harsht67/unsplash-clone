@@ -11,6 +11,7 @@
     }
 
     .nav--active {
+        color: #000;
         border-color: #000 !important;
     }
 
@@ -26,9 +27,13 @@
     .HeaderRow2__focusNav {
         display: none;
 
+        hr {
+            opacity: 0.7;
+        }
+
         @include mq(lg) {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             margin-inline-end: 0.5rem;
 
             span {
@@ -85,9 +90,15 @@
                 li { 
                     flex-shrink: 0;
                     position: relative;
-                    padding: 1rem 0.5rem;
+                    padding: 1rem 0;
+                    margin-inline: 1rem;
                     cursor: pointer;
                     border-block-end: 2px solid transparent;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #000;
+                    }
                 }
                 
                 @include mq(lg) {

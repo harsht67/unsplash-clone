@@ -26,7 +26,7 @@ function HeaderRow1() {
             </nav>
 
             <div className="HeaderRow1__register">
-                Log in / Sign up
+                <span>Log in</span> / <span>Sign up</span>
             </div>
 
             <button

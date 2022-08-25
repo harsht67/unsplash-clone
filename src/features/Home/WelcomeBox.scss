@@ -11,13 +11,12 @@
     .WelcomeBox__main {
         display: flex;
         flex-flow: column;
-        gap: 1rem;
+        gap: 1.25rem;
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
 
         > :nth-child(3) {
-            color: initial;
             border-radius: 0.25rem;
         }
 
@@ -34,6 +33,7 @@
         right: 0;
         bottom: 0;
         padding: 1rem;
+        opacity: 0.9;
 
         > * {
             width: 40%;
@@ -42,7 +42,7 @@
     }
 
     @include mq(lg) {
-        height: 450px;
+        height: 500px;
 
         .WelcomeBox__main {
             width: 60%;

@@ -2,7 +2,7 @@ import './User.scss'
 
 function User({user}) {
     return (
-        <div className="User" >
+        <div className="User text">
 
             <img
                 src={user.profile_image.small} 
