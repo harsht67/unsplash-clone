@@ -48,7 +48,7 @@ function WelcomeBox() {
                     :
                         <section className='WelcomeBox__main2'>
                             
-                            <h1 className="f2">
+                            <h1 className="f3">
                                 {topic.replace(/-/g, " ")}
                             </h1>
 

@@ -5,14 +5,15 @@
 - SCSS
 - Redux
 - Axios
-- React-icons
+- React icons
+- React responsive masonry
 - Unsplash API
 
 ## Current features 
 - Responsive design
 - Infinite scroll 
+- Search 
+- Filter (topics)
 
-## Features i would like to add 
-- Search
-- Filter
+## Features I would like to add in future 
 - Authentication 
