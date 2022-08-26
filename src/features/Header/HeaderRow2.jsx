@@ -2,55 +2,58 @@ import './HeaderRow2.scss'
 
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
 import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { topicChanged } from '../../store/topicSlice'
 
-const navList = [
-    "Editorial",
-    "Girls vs. Sterotypes",
-    "Current Events",
-    "Wallpapers",
-    "3D renders",
-    "Textures & Patterns",
-    "Experimental",
-    "Architecture",
-    "Nature",
-    "Business Work",
-    "Fashion",
-    "Film",
-    "Food & Drink",
-    "Health & Wellness",
-    "People",
-    "Interiors",
-    "Street Photography", 
-    "Travel",
-    "Animals",
-    "Spirituality",
-    "Arts & Culture",
-    "History",
-    "Athlestics",
+const topics = [
+    "editorial",
+    "girls-vs-stereotypes",
+    "current-events",
+    "wallpapers",
+    "3d-renders",
+    "textures-patterns",
+    "experimental",
+    "architecture",
+    "nature",
+    "business-work",
+    "fashion",
+    "film",
+    "food-drink",
+    "people",
+    "interiors",
+    "street-photography", 
+    "travel",
+    "animals",
+    "spirituality",
+    "arts-culture",
 ]
 
 function HeaderRow2() {
 
-    const [currNav, setCurrNav] = useState('')
+    const topic = useSelector(state => state.topic.current)
 
-    const [featNav, setFeatNav] = useState('')
+    const [featuredTopic, setFeaturedTopic] = useState('')
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
         
-        setCurrNav(navList[0])
-
-        setFeatNav(navList[1])
+        setFeaturedTopic(topics[1])
 
     }, [])
+
+    const changeCurrentTopic = (newTopic) => {
+        dispatch(topicChanged(newTopic))
+    }
 
     const getClassList = (item) => {
         let list = ""
         
-        if(featNav==item) {
+        if(featuredTopic == item) {
             list = "nav--feat"
         }
 
-        if(currNav==item) {
+        if(topic == item) {
             list += " nav--active"
         }
 
@@ -63,8 +66,8 @@ function HeaderRow2() {
             <section className="HeaderRow2__focusNav">
                 
                 <span 
-                    className={currNav=="Editorial" && "nav--active"}
-                    onClick={() => setCurrNav("Editorial")}
+                    className={topic=="editorial" && "nav--active"}
+                    onClick={() => changeCurrentTopic("editorial")}
                 >
                     Editorial
                 </span>
@@ -82,13 +85,13 @@ function HeaderRow2() {
                 <div className="HeaderRow2__nav__content">
                     <ul className="ul-nav">
 
-                        {navList.map(item => (
+                        {topics.map(item => (
                             <li 
                                 key={item}
-                                onClick={() => setCurrNav(item)}
+                                onClick={() => changeCurrentTopic(item)}
                                 className={getClassList(item)}
                             >
-                                {item}
+                                {item.replace(/-/g, " ")}
                             </li>
                         ))}
 

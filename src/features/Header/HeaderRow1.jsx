@@ -1,11 +1,22 @@
 import './HeaderRow1.scss'
-
 import { images } from '../../constants'
 import SearchBar from './SearchBar'
+import { searchCleared } from '../../store/searchSlice'
 
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { useSelector, useDispatch } from 'react-redux'
+import { topicChanged } from '../../store/topicSlice'
 
 function HeaderRow1() {
+
+    const dispatch = useDispatch()
+
+    const goToHome = () => {
+        dispatch(searchCleared())
+
+        dispatch(topicChanged('editorial'))
+    }
+
     return (
         <section className="HeaderRow1" >
 
@@ -13,6 +24,7 @@ function HeaderRow1() {
                 src={images.logo}
                 alt="unsplash logo"
                 className="HeaderRow1__logo"
+                onClick={goToHome}
             />
 
             <SearchBar/>
